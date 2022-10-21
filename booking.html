@@ -1,17 +1,139 @@
 <html>
     <head>
         <title>booking page</title>
-
+       <link href="style.css" type="text/css" rel="stylesheet";>
+       <style>
+        label{
+    font-weight:bold;
+    color: green;
+}
+#lastname{
+    color:chocolate;
+}
+body > p{
+    font-style: italic;
+}
+       </style>
+        
     </head>
-    <body>
-         <body background="https://s-i.huffpost.com/gen/1922499/images/o-AIRPLANE-facebook.jpg">
-    </body>
+
+       
     
+
+    <body background="https://th.bing.com/th/id/R.740791da3fd9e565c9342f9c00711580?rik=uB%2bFbYtOUgd%2bDw&riu=http%3a%2f%2fwallpaperheart.com%2fwp-content%2fuploads%2f2018%2f08%2fwallpaper-hd-abstract-3.jpg&ehk=2Zktk5%2fUmhd5cv0r9XhS%2fgy1kM3zGIuPUgrHv0O6f4g%3d&risl=&pid=ImgRaw&r=0">
+        <p>first paragraph first paragraphfirst paragraphfirst paragraph first paragraph first paragraph first paragraph first paragraph first paragraph
+</p>
+<p>second paragraph second paragraph second paragraph second paragraph second paragraph 
+</p>
+        <h1><center>Booking page</center></h1>
+        
+<form action="print.html" method="post">
+       <table cellspacing="7" cellpadding="3">
+        <tr>
+            <td>
+                <label for="title"style="color:white">Title</label>
+                </td>
+               <td>
+                <select id="title" name="title" multiple>
+                <option value="1" selected>Mr.</option>
+                <option value="2" selected>Mrs.</option>
+                <option value="3" selected>Ms.</option>
+               </td> 
+               </tr>
+               <tr>
+               <td>
+                <label for="first name"style="color:white">First name:</label>
+            </td>
+            <td>
+                <input type="text" id="firstname" name="Firstname" placeholder="your first name">
+            </td>
+        </tr>
+        <tr>
+            <video width="320" height="240" contols autoplay muted loop>
+                <source src="http://techslides.com/demos/sample-videos/small.webm">
+           
+            </video>
+       
+            <td>
+                <label for="last name"style="color:white">last name:</label>
+                <td>
+                    <input type="text" id="lastname" name="lastname" placeholder="your last name">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="adress"style="color:white">address:</label>
+            </td>
+            <td>
+                <input type="text" id="address" style="width:190px;height:150px" name="address" placeholder="your full adress">
+        </tr>
+        <tr>
+            <td>
+                <label for="mobile"style="color:white">mobile:</label>
+                <td>
+                    <input type="text" id="mobile" name="mobile" placeholder2="your mobile number">
+                </td>
+                </tr>
+           <tr>
+                <td>
+            <label for="DOB" Date of birth style="color:white">DOB</label>
+        <td>
+        <input type="date" id="DOB" name="DOB" style-="width:180px">
+        </td>
+        
+        </tr>
+        <tr>
+            <td>
+                <label for="photo" style="color:white">image</label>
+
+            </td>
+            <td>
+                <input type="file" id="photofile" name="photofile" accept="image/*,*jpg"/>
+            </td>
+        </tr>
+<tr>
+    <td>
+        <label for="gender" style="color:white">gender</label>
     
-    
-    
-        <h2>search for your flights </h2>
-        <h3> <a href="search results.html">click to search flights</a></h3>
-        <a href="index.html">click to return to home page</a>
-    </body>
+    </td>
+    <td>
+        <input type="radio" id="male" name="gender"/>
+        <label>male</label>
+        <input type="radio" id="female" name="gender"/>
+        <label>female</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <input type="submit" onclick="javascript:saveData();">
+
+    </td>
+    <td>
+        <input type="reset" id="reset" name="reset" value="reset">
+        
+    </td>
+
+</tr>
+
+        </table>
+</form>
+
+<script>
+    function saveData(){
+                var firstname=document.getElementById("firstname").value;
+                var lastname=document.getElementById("lastname").value;
+                var address =document.getElementById("address").value;
+
+   
+
+                localStorage.setItem("firstname",firstname);
+
+                localStorage.setItem("lastname",lastname);
+
+                localStorage.setItem("address",address);
+    }
+
+</script>
+</body>
 </html>
